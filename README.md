@@ -1,14 +1,14 @@
-# Chokora
+# GitHub-Tafuta
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
  
 ## Author 
-The project has been created by Sharon Cherop for Moringa School. In case of any further information, contact @sharrycherop on twitter. 
+The project has been created by Sharon Cherop for ALX final project. In case of any further information, contact @sharrycherop on twitter. 
 
 ## Description
 
-Chokora (search in Swahili) is an application that allows a user to search for their username profiles on Github and see their repositories. 
+GitHub-Tafuta (search in Swahili) is an application that allows a user to search for their username profiles on Github and see their repositories. 
 
 ## Tools Used
 
@@ -21,8 +21,9 @@ Angular 5.0.
 
 ### Installing
 
-* A user clones the project from https://github.com/CheropS/Chokora and cds into the folder Chokora. 
-
+* A user clones the project from https://github.com/CheropS/Github-tafuta and cds into the folder Github-tafuta. 
+* Run npm install
+* Create src/environments/environment.ts file and add contents from environment.prod.ts
 
 ## Development server
 
