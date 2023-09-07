@@ -1,0 +1,56 @@
+<div class="cont">
+    <div class="row">
+        <div class="col-md-3">
+            <form #fInput="ngForm" id="frm" class="form-inline">
+                <input name='uname' type="search" id="gsearch" placeholder="input username"
+                    class="form-control form-control-sm w-95" [(ngModel)]='uname' (keyup)='getUsername()'><br>
+                <input type="submit" value="Search" class="btn btn-primary" (click)='getUsername()'
+                    (click)='getRepository()'>
+                <br>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <br>
+            <div class="row">
+                <div class="col-md-3 avatar">
+                    <img [src]=user.avatar_url alt="" height="300px"  >
+                </div>
+                <div class="col-md-4">
+                <h2>Account Details</h2><hr>
+                    <p><span id="output">Username:</span>{{user.login}} </p><hr>
+                   <p><span id="output">Followers:</span>:{{user.followers}} </p><hr>
+                    <p><span id="output">Date created:</span>  {{user.created_at| date}}</p><hr>
+                    <p><span id="output">Total Repositories:</span>  {{user.public_repos}}</p>
+                    <p><a href="https://github.com/{{user.login}}" target="_blank"><button class="btn btn-primary" >Check Profile</button></a></p>
+                </div>
+                <div class="col-md-5">
+                    <br><br><br>
+                    <p><span id="output">Email:</span>{{user.email}} </p><hr>
+                    <p><span id="output">Location:</span>{{user.location}} </p><hr>
+                    <p><span id="output">Company:</span>{{user.company}} </p><hr>
+                    <p><span id="output">Lastly Updated:</span>{{user.updated_at|date}} </p><hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-md-6">
+    <div class="eachitem" *ngFor='let repo of repos'>
+        <div class="card">
+            <div class="card-header">
+                <h3>{{repo.name}}</h3>
+            </div>
+            <div class="card-body">
+                Created on:{{repo.created_at|date}}<br>
+                Number of Forks: {{repo.forks_count}}
+                <p>Details:
+                    {{repo.description}}
+                </p>
+            </div>
+        </div>
+        <br><hr>
+    </div>
+    </div>
+    </div>
+</div>
+<ngx-avatar></ngx-avatar>
