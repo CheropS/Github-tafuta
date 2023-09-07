@@ -24,6 +24,7 @@ Angular 5.0.
 * A user clones the project from https://github.com/CheropS/Github-tafuta and cds into the folder Github-tafuta. 
 * Run npm install
 * Create src/environments/environment.ts file and add contents from environment.prod.ts
+* run npm install npm install --save bootstrap 
 
 ## Development server
 
